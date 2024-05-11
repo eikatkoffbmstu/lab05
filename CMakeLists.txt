@@ -4,14 +4,12 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(BUILD_EXAMPLES "Build examples" OFF)
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 option(BUILD_TESTS "Build tests" OFF)
-=======
->>>>>>> 0393681 (Create CMakeLists.txt)
-=======
+
 option(BUILD_TESTS "Build tests" OFF)
->>>>>>> 5745dfd (added tests)
+
 
 project(print)
 
@@ -42,10 +40,7 @@ install(TARGETS print
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
 install(EXPORT print-config DESTINATION cmake)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 5745dfd (added tests)
+
 if(BUILD_TESTS)
   enable_testing()
   add_subdirectory(third-party/gtest)
@@ -54,8 +49,4 @@ if(BUILD_TESTS)
   target_link_libraries(check ${PROJECT_NAME} gtest_main)
   add_test(NAME check COMMAND check)
 endif()
-<<<<<<< HEAD
-=======
->>>>>>> 0393681 (Create CMakeLists.txt)
-=======
->>>>>>> 5745dfd (added tests)
+
